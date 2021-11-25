@@ -1,0 +1,138 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/Basic.cpp
+cctype
+-
+iostream
+-
+string
+-
+cstring
+-
+exp.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/exp.h
+parser.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/parser.h
+program.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/program.h
+../StanfordCPPLib/error.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/error.h
+../StanfordCPPLib/tokenscanner.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/tokenscanner.h
+../StanfordCPPLib/simpio.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/simpio.h
+../StanfordCPPLib/strlib.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/strlib.h
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/evalstate.h
+string
+-
+map
+-
+../StanfordCPPLib/map.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/map.h
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/exp.h
+evalstate.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/evalstate.h
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/parser.h
+string
+-
+exp.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/exp.h
+../StanfordCPPLib/tokenscanner.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/tokenscanner.h
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/program.h
+string
+-
+statement.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/statement.h
+map
+-
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/statement.h
+evalstate.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/evalstate.h
+exp.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/Basic/exp.h
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/error.h
+string
+-
+exception
+-
+private/main.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/private/main.h
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/foreach.h
+iterator
+-
+map
+-
+cstddef
+-
+cstring
+-
+ios
+-
+fstream
+-
+sstream
+-
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/map.h
+cstdlib
+-
+foreach.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/foreach.h
+stack.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/stack.h
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/private/main.h
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/private/tokenpatch.h
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/simpio.h
+string
+-
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/stack.h
+vector.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/vector.h
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/strlib.h
+iostream
+-
+string
+-
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/tokenscanner.h
+iostream
+-
+string
+-
+private/tokenpatch.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/private/tokenpatch.h
+
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/vector.h
+iterator
+-
+iostream
+-
+sstream
+-
+string
+-
+foreach.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/foreach.h
+strlib.h
+/mnt/d/homework of c++/BASIC-Interpreter-main/StanfordCPPLib/strlib.h
+
