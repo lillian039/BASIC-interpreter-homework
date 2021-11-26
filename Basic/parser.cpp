@@ -49,7 +49,7 @@ Expression *readE(TokenScanner &scanner, int prec) {
         int newPrec = precedence(token);
         if (newPrec <= prec) break;
         Expression *rhs = readE(scanner, newPrec);
-        exp = new CompoundExp(token, exp, rhs);
+        exp = new CompoundExp(token, exp, rhs);//
     }
     scanner.saveToken(token);
     return exp;

@@ -7,10 +7,9 @@
  * of each of these methods with an implementation that satisfies
  * the performance guarantees specified in the assignment.
  */
-
+#include <iostream>
 #include <string>
 #include "program.h"
-#include "statement.h"
 
 using namespace std;
 
@@ -39,13 +38,13 @@ string Program::getSourceLine(int lineNumber) {
     return lines[lineNumber];    // Replace this stub with your own code
 }
 
-void Program::setParsedStatement(int lineNumber, Statement *stmt) {
+/*void Program::setParsedStatement(int lineNumber, Statement *stmt) {
     // Replace this stub with your own code
 }
 
 Statement *Program::getParsedStatement(int lineNumber) {
     return NULL;  // Replace this stub with your own code
-}
+}*/
 
 int Program::getFirstLineNumber() {
     auto iter=lines.begin();
