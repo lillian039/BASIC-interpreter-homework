@@ -250,7 +250,7 @@ Error::Error(string str) {
 }
 
 void Error::execute(string line, Program &program, EvalState &state, TokenScanner &scanner){
-  /*  cout<<"SYNTAX ERROR\n";
+/* cout<<"SYNTAX ERROR\n";*/
 }
 
 void ProcessLine(string line, Program &program, EvalState &state) {
