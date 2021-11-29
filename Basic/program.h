@@ -9,7 +9,6 @@
 #define _program_h
 
 #include <string>
-#include "statement.h"
 #include <map>
 
 using namespace std;
@@ -103,18 +102,18 @@ public:
  * exists, the memory for that statement is reclaimed.
  */
 
-    void setParsedStatement(int lineNumber, Statement *stmt);
+    /*void setParsedStatement(int lineNumber, Statement *stmt);
 
-/*
+*//*
  * Method: getParsedStatement
  * Usage: Statement *stmt = program.getParsedStatement(lineNumber);
  * ----------------------------------------------------------------
  * Retrieves the parsed representation of the statement at the
  * specified line number.  If no value has been set, this method
  * returns NULL.
- */
+ *//*
 
-    Statement *getParsedStatement(int lineNumber);
+    Statement *getParsedStatement(int lineNumber);*/
 
 /*
  * Method: getFirstLineNumber
@@ -143,8 +142,10 @@ public:
 
     bool numberExist(int number);
 
+    void storeSourceLine(string &line, string &cmd, Program &program);
+
 private:
-    map<int,string>lines;
+    map<int, string> lines;
 // Fill this in with whatever types and instance variables you need
 
 };

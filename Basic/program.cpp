@@ -7,10 +7,10 @@
  * of each of these methods with an implementation that satisfies
  * the performance guarantees specified in the assignment.
  */
-
+#include <iostream>
 #include <string>
 #include "program.h"
-#include "statement.h"
+#include "../StanfordCPPLib/strlib.h"
 
 using namespace std;
 
@@ -39,46 +39,62 @@ string Program::getSourceLine(int lineNumber) {
     return lines[lineNumber];    // Replace this stub with your own code
 }
 
-void Program::setParsedStatement(int lineNumber, Statement *stmt) {
+/*void Program::setParsedStatement(int lineNumber, Statement *stmt) {
     // Replace this stub with your own code
 }
 
 Statement *Program::getParsedStatement(int lineNumber) {
     return NULL;  // Replace this stub with your own code
-}
+}*/
 
 int Program::getFirstLineNumber() {
-    auto iter=lines.begin();
+    auto iter = lines.begin();
     return iter->first;// Replace this stub with your own code
 }
 
 int Program::getNextLineNumber(int lineNumber) {
-    auto iter=lines.begin();
-    while(iter->first!=lineNumber){
+    auto iter = lines.begin();
+    while (iter->first != lineNumber) {
         iter++;
     }
     iter++;
     return iter->first;
 }
 
-bool Program::nextEnd(int number){
-    auto iter=lines.begin();
-    while(iter->first!= number){
+bool Program::nextEnd(int number) {
+    auto iter = lines.begin();
+    while (iter->first != number) {
         iter++;
     }
-    if(++iter==lines.end())return true;
-    else return false;
+    iter++;
+    if (iter == lines.end())
+        return true;
+    else
+        return false;
+
 }
 
-void Program::list(){
-    auto iter=lines.begin();
-    while(iter!=lines.end()){
-        cout<<iter->first<<" "<<iter->second<<'\n';
+void Program::list() {
+    auto iter = lines.begin();
+    while (iter != lines.end()) {
+        cout << iter->first << " " << iter->second << '\n';
         iter++;
     }
 }
 
-bool Program::numberExist(int number){
-    if(lines[number].size()!=0)return true;
-    else return false;
+bool Program::numberExist(int number) {
+    if (lines[number].empty())return false;
+    else return true;
+}
+
+void Program::storeSourceLine(string &line, string &cmd, Program &program) {
+    int line_num = stringToInteger(cmd);
+    int line_len = line.size();
+    int len_cmd = cmd.size();
+    if (len_cmd == line_len) {
+        program.removeSourceLine(line_num);
+        return;
+    }
+    cmd = line.erase(0, len_cmd + 1);
+    program.addSourceLine(line_num, cmd);
 }
