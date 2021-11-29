@@ -12,18 +12,9 @@
 #ifndef _statement_h
 #define _statement_h
 
-#include <iostream>
-#include <string>
-#include <cstring>
+#include "evalstate.h"
 #include "exp.h"
-#include "parser.h"
-#include "program.h"
-#include "../StanfordCPPLib/error.h"
-#include "../StanfordCPPLib/tokenscanner.h"
 
-#include "../StanfordCPPLib/simpio.h"
-
-using namespace std;
 /*
  * Class: Statement
  * ----------------
@@ -34,10 +25,8 @@ using namespace std;
  * BASIC interpreter.
  */
 enum StatementType {
-    PRINT, QUIT, CLEAR, LIST, REM, LET, GOTO, IF, END
+    PRINT,QUIT,CLEAR,LIST,REM,LET,GOTO,IF
 };
-
-
 class Statement {
 
 public:
@@ -73,111 +62,12 @@ public:
  * controlling the operation of the interpreter.
  */
 
-    virtual void execute(string line, Program &program, EvalState &state, TokenScanner &scanner) = 0;
+    virtual void execute(EvalState &state) = 0;
 
 };
 
 
-class Print : public Statement {
-private:
-    string str;
-public:
-    Print(string str);
 
-    void execute(string line, Program &program, EvalState &state, TokenScanner &scanner);
-};
-
-class Clear : public Statement {
-    string str;
-public:
-    Clear(string str);
-
-    void execute(string line, Program &program, EvalState &state, TokenScanner &scanner);
-};
-
-class Quit : public Statement {
-private:
-    string str;
-public:
-    Quit(string str);
-
-    void execute(string line, Program &program, EvalState &state, TokenScanner &scanner);
-};
-
-class List : public Statement {
-    string str;
-public:
-    List(string str);
-
-    void execute(string line, Program &program, EvalState &state, TokenScanner &scanner);
-};
-
-class Rem : public Statement {
-    string str;
-public:
-    Rem(string str);
-
-
-    void execute(string line, Program &program, EvalState &state, TokenScanner &scanner);
-};
-
-class Let : public Statement {
-    string str;
-public:
-    Let(string str);
-
-    void execute(string line, Program &program, EvalState &state, TokenScanner &scanner);
-};
-
-class Input : public Statement {
-    string str;
-public:
-    Input(string str);
-
-    void execute(string line, Program &program, EvalState &state, TokenScanner &scanner);
-};
-
-class Run : public Statement {
-    string str;
-public:
-    Run(string str);
-
-    void execute(string line, Program &program, EvalState &state, TokenScanner &scanner);
-};
-
-class GoTo : public Statement {
-    string str;
-public:
-    GoTo(string str);
-
-    void execute(string line, Program &program, EvalState &state, TokenScanner &scanner);
-};
-
-class End : public Statement {
-    string str;
-public:
-    End(string str);
-
-    void execute(string line, Program &program, EvalState &state, TokenScanner &scanner);
-};
-
-class If : public Statement {
-    string str;
-public:
-    If(string str);
-
-    void execute(string line, Program &program, EvalState &state, TokenScanner &scanner);
-};
-
-class Error : public Statement {
-    string str;
-public:
-    Error(string str);
-
-    void execute(string line, Program &program, EvalState &state, TokenScanner &scanner);
-};
-
-Statement *getStateTpye(string cmd);
 /*
  * The remainder of this file must consists of subclass
  * definitions for the individual statement forms.  Each of
@@ -188,7 +78,6 @@ Statement *getStateTpye(string cmd);
  * an Expression object), the class implementation must also
  * specify its own destructor method to free that memory.
  */
-
 
 
 #endif
